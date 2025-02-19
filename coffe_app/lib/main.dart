@@ -1,3 +1,5 @@
+import 'package:cofee_app/theme/theme.dart';
+import 'package:cofee_app/view/splash_screen/presentation/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +11,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return MaterialApp(
+      theme: theme,
+      home: SplashScreen(),
     );
   }
 }
