@@ -41,5 +41,10 @@ ThemeData theme = ThemeData(
       fontWeight: FontWeight.w500,
       fontSize: 8,
     ),
+    bodyMedium: TextStyle(
+      fontWeight: FontWeight.w500,
+      fontSize: 20,
+      color: Colors.black,
+    ),
   ),
 );

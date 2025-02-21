@@ -1,4 +1,5 @@
 import 'package:cofee_app/theme/theme.dart';
+import 'package:cofee_app/view/coffee_information_screen/presentation/coffee_information_screen.dart';
 
 import 'package:cofee_app/view/list_coffee_screen/widgets/big_card.dart';
 import 'package:cofee_app/view/list_coffee_screen/widgets/coffee_card.dart';
@@ -150,11 +151,25 @@ class _ListCoffeeScreenState extends State<ListCoffeeScreen> {
                     childAspectRatio: 0.75,
                   ),
                   itemBuilder: (context, index) {
-                    return CoffeeCard(
-                      image: 'images/2.png',
-                      title: 'Caffe Mocha',
-                      description: 'Deep Foam',
-                      price: r'$ 4.53',
+                    return GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return CoffeeInformationScreen(
+                                image: "images/2.png",
+                              );
+                            },
+                          ),
+                        );
+                      },
+                      child: CoffeeCard(
+                        image: 'images/2.png',
+                        title: 'Caffe Mocha',
+                        description: 'Deep Foam',
+                        price: r'$ 4.53',
+                      ),
                     );
                   },
                 ),
